@@ -1,7 +1,3 @@
-/**
- * EDF_Oeste - Google Apps Script base
- * Autor: RJP
- */
 const SHEET_EDIFICIOS = 'Edificios';
 const SHEET_INSPECOES = 'Inspecoes';
 

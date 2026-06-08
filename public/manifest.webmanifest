@@ -4,14 +4,20 @@
   "description": "Gestão de Edifícios e Manutenção - Autor RJP",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#004B2F",
-  "theme_color": "#004B2F",
+  "background_color": "#17B5A4",
+  "theme_color": "#17B5A4",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "edf-oeste-icon.svg",
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
