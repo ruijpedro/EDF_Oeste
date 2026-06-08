@@ -30,14 +30,20 @@ jobs:
       - name: Build web
         run: npm run build
 
-      - name: Add Android
-        run: npx cap add android || true
+      - name: Recreate Android project
+        run: |
+          rm -rf android
+          npx cap add android
+          npx cap sync android
 
-      - name: Sync Android
-        run: npx cap sync android
+      - name: Apply EDF_Oeste icon
+        run: node scripts/prepare-android-icons.js
 
       - name: Build APK
-        run: cd android && gradle assembleDebug
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
