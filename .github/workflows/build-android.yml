@@ -1,10 +1,13 @@
 name: Build EDF_Oeste APK
+
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   build-android:
     runs-on: ubuntu-latest
