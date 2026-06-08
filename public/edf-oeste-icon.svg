@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#004B2F"/><stop offset="1" stop-color="#007A4D"/></linearGradient></defs>
+<rect width="512" height="512" rx="104" fill="url(#g)"/>
+<path d="M122 392V176l134-72 134 72v216h-76V242h-44v150h-28V242h-44v150h-76z" fill="#fff"/>
+<path d="M172 198h44v38h-44zm0 64h44v38h-44zm124-64h44v38h-44zm0 64h44v38h-44z" fill="#DCEFE7"/>
+<circle cx="382" cy="366" r="54" fill="#10231C"/>
+<path d="M356 364h52v16h-52zM374 338h16v52h-16z" fill="#fff"/>
+<text x="256" y="462" text-anchor="middle" font-size="48" font-family="Arial" font-weight="900" fill="#fff">RJP</text>
+</svg>
