@@ -30,14 +30,22 @@ jobs:
       - name: Build web
         run: npm run build
 
-      - name: Recreate Android project
+      - name: Create Android project
         run: |
           rm -rf android
           npx cap add android
-          npx cap sync android
 
-      - name: Apply EDF_Oeste icon
-        run: node scripts/prepare-android-icons.js
+      - name: Generate Android icon from assets/icon.png
+        run: |
+          npx capacitor-assets generate --android --iconBackgroundColor '#FFFFFF' --iconBackgroundColorDark '#FFFFFF' --splashBackgroundColor '#17B5A4' --splashBackgroundColorDark '#17B5A4'
+
+      - name: Sync Android
+        run: npx cap sync android
+
+      - name: Verify icons
+        run: |
+          find android/app/src/main/res -name 'ic_launcher*' -type f -print
+          grep -n "android:icon" android/app/src/main/AndroidManifest.xml || true
 
       - name: Build APK
         run: |
