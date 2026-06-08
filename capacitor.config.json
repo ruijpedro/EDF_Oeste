@@ -1,0 +1,21 @@
+{
+  "appId": "pt.rjp.edfoeste",
+  "appName": "EDF_Oeste",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1400,
+      "launchAutoHide": true,
+      "backgroundColor": "#004B2F",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "dark",
+      "backgroundColor": "#004B2F"
+    }
+  }
+}
