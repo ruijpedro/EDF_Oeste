@@ -1,42 +1,31 @@
-# EDF_Oeste
+# EDF_Oeste - Ícone Android Final
 
 Gestão de Edifícios e Manutenção  
 Autor: RJP
 
-## Versão corrigida
+## Correção do ícone genérico
 
-Esta versão foi refeita para resolver o erro:
+Esta versão deixa de depender de copiar manualmente `ic_launcher.png`.
 
-`Directory android does not contain a Gradle build`
+Agora usa o método correto:
 
-A pasta Android incompleta foi removida. O GitHub Actions agora cria automaticamente o projeto Android completo com Capacitor.
+- `assets/icon.png`
+- `@capacitor/assets`
+- `npx capacitor-assets generate --android`
+
+O GitHub Actions cria todos os ícones Android, incluindo os ícones adaptativos usados pelo Android moderno.
 
 ## Como usar
 
-1. Faz upload de todos os ficheiros/pastas deste ZIP para a raiz do repositório.
-2. No GitHub, abre **Actions**.
-3. Executa **Build EDF_Oeste APK**.
-4. O APK aparece em **Artifacts**.
+1. Substitui todos os ficheiros do repositório por este ZIP.
+2. Apaga a pasta `android` antiga do GitHub, se existir.
+3. Faz upload deste ZIP extraído.
+4. Corre o workflow **Build EDF_Oeste APK**.
+5. Desinstala a app antiga no telemóvel.
+6. Reinicia o telemóvel.
+7. Instala a nova APK.
 
-## O workflow agora faz automaticamente
+## Importante
 
-```bash
-npm install
-npm run build
-rm -rf android
-npx cap add android
-npx cap sync android
-node scripts/prepare-android-icons.js
-cd android
-./gradlew assembleDebug
-```
-
-## Ícone
-
-O ícone é aplicado depois de o Android ser criado.  
-Usa os ficheiros:
-
-- `public/icon-192.png`
-- `public/icon-512.png`
-
-Se o telemóvel mostrar o ícone antigo, desinstala primeiro a app antiga e instala a nova APK.
+Se continuares a ver o ícone genérico, estás provavelmente a instalar um APK antigo.  
+Confirma que o artifact descarregado é o novo `EDF_Oeste_APK`.
