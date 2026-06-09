@@ -124,3 +124,43 @@ com as folhas:
 - Intervencoes
 - Custos
 - Documentos
+
+
+## v4 — Google Bridge para APK + WebApp
+
+Esta versão resolve o problema do login Google no APK.
+
+A APK e a WebApp comunicam com um Google Apps Script publicado como Web App.
+
+### Como configurar
+
+1. Criar projeto Apps Script.
+2. Colar o conteúdo de:
+
+```text
+google-apps-script/Code.gs
+```
+
+3. No Apps Script, ativar o serviço avançado:
+   - Drive API
+
+4. No Google Cloud associado, ativar:
+   - Google Drive API
+   - Google Sheets API
+   - Google Calendar API
+
+5. Publicar:
+   - Deploy > New deployment
+   - Type: Web app
+   - Execute as: Me
+   - Who has access: Anyone with the link
+
+6. Copiar o URL terminado em `/exec`.
+
+7. Na app:
+   - Google Bridge
+   - Colar URL
+   - Guardar
+   - Testar ligação
+   - Criar estrutura Google
+   - Importar Excel > Atualizar Tudo
