@@ -1,31 +1,68 @@
-# EDF_Oeste - Ícone Android Final
+# EDF_Oeste_GoogleDrive_Sheets
 
-Gestão de Edifícios e Manutenção  
-Autor: RJP
+Versão com:
+- Google Login
+- Google Sheets API
+- Google Drive API
+- Google Calendar API
+- Upload de fotos para Drive
+- PDF para Drive
+- Leitura das três folhas:
+  - Folha_Classificacao_Edificios_Linha_Oeste_RJP
+  - Lista de edifícios
+  - Estações e Apeadeiros
 
-## Correção do ícone genérico
+Configurar na app:
+- API Key
+- Client ID
+- Spreadsheet ID
+- Drive Folder ID
+- Calendar ID
 
-Esta versão deixa de depender de copiar manualmente `ic_launcher.png`.
 
-Agora usa o método correto:
+## Configuração Google
 
+Na app, abrir o separador **Google** e preencher:
+
+```text
+API Key
+Client ID
+Spreadsheet ID
+Drive Folder ID
+Calendar ID
+```
+
+Depois clicar em:
+
+```text
+Guardar
+Ligar Google
+Ler 3 folhas
+```
+
+## Logótipos e ícones
+
+Consultar:
+
+```text
+LOGOTIPOS_E_ICONES.md
+```
+
+
+## Logo e ícone integrados
+
+Foi integrado o ficheiro enviado no ZIP:
+
+```text
+1024.png
+```
+
+Locais atualizados:
+- `public/ip-logo.png` ou `public/ip-logo.svg`
 - `assets/icon.png`
-- `@capacitor/assets`
-- `npx capacitor-assets generate --android`
+- `assets/splash.png`
+- `public/favicon.png`
+- `public/icon-192.png`
+- `public/icon-512.png`
 
-O GitHub Actions cria todos os ícones Android, incluindo os ícones adaptativos usados pelo Android moderno.
-
-## Como usar
-
-1. Substitui todos os ficheiros do repositório por este ZIP.
-2. Apaga a pasta `android` antiga do GitHub, se existir.
-3. Faz upload deste ZIP extraído.
-4. Corre o workflow **Build EDF_Oeste APK**.
-5. Desinstala a app antiga no telemóvel.
-6. Reinicia o telemóvel.
-7. Instala a nova APK.
-
-## Importante
-
-Se continuares a ver o ícone genérico, estás provavelmente a instalar um APK antigo.  
-Confirma que o artifact descarregado é o novo `EDF_Oeste_APK`.
+O workflow Android usa `@capacitor/assets` para gerar automaticamente os ícones Android.
